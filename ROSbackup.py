@@ -45,11 +45,9 @@ def make_salt(size):
     return bytes([randrange(256) for _ in range(size)])
 
 def setup_cipher(salt, password):
-
-    key = SHA.new(salt + bytes(password).digest())
+    key = SHA.new(salt + bytes(password, 'ascii')).digest()
     cipher = ARC4.new(key)
     cipher.encrypt(bytes(RC4_SKIP)) # skip stream start
-
     return cipher
 
 def extract_data(input_file):
