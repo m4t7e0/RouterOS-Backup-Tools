@@ -202,7 +202,7 @@ def info(input_file):
         print("RouterOS Encrypted Backup")
         print("Length:", length, "bytes")
         salt = get_salt(input_file)
-        print("Salt (hex):", salt.hex())
+        #print("Salt (hex):", salt.hex())
         magic_check = get_magic_check(input_file)
         print("Magic Check (hex):", magic_check.hex())
 
@@ -222,8 +222,8 @@ def decrypt(input_file, output_file, password):
         if magic == MAGIC_ENCRYPTED:
             print("RouterOS Encrypted Backup")
             print("Length:", length, "bytes")
-            #salt = get_salt(input_file)
-            print("Salt (hex):", salt.hex())
+            salt = get_salt(input_file)
+            #print("Salt (hex):", salt.hex())
             magic_check = get_magic_check(input_file)
             print("Magic Check (hex):", magic_check.hex())
 
@@ -321,7 +321,7 @@ def bruteforce(input_file, wordlist_file, parallel=False):
             print("RouterOS Encrypted Backup")
             print("Length:", length, "bytes")
             salt = get_salt(input_file)
-            print("Salt (hex):", salt.hex())
+            #print("Salt (hex):", salt.hex())
             magic_check = get_magic_check(input_file)
             print("Magic Check (hex):", magic_check.hex())
 
