@@ -5,7 +5,7 @@
 import sys, os, struct
 from random import randrange
 from argparse import ArgumentParser, FileType
-from crypto.Cipher import ARC4
+from Crypto.Cipher import ARC4
 from Crypto.Hash import SHA
 
 
