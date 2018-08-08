@@ -323,7 +323,7 @@ def bruteforce(input_file, wordlist_file, parallel=False):
             salt = get_salt(input_file)
             #print("Salt (hex):", salt.hex())
             magic_check = get_magic_check(input_file)
-            print("Magic Check (hex):", magic_check.hex())
+            #print("Magic Check (hex):", magic_check.hex())
 
             if parallel:
 
