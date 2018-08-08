@@ -225,7 +225,7 @@ def decrypt(input_file, output_file, password):
             salt = get_salt(input_file)
             #print("Salt (hex):", salt.hex())
             magic_check = get_magic_check(input_file)
-            print("Magic Check (hex):", magic_check.hex())
+            #print("Magic Check (hex):", magic_check.hex())
 
             cipher = setup_cipher(salt, password)
 
