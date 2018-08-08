@@ -222,7 +222,7 @@ def decrypt(input_file, output_file, password):
         if magic == MAGIC_ENCRYPTED:
             print("RouterOS Encrypted Backup")
             print("Length:", length, "bytes")
-            salt = get_salt(input_file)
+            #salt = get_salt(input_file)
             print("Salt (hex):", salt.hex())
             magic_check = get_magic_check(input_file)
             print("Magic Check (hex):", magic_check.hex())
